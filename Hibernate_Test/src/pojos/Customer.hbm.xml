@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 2, 2019 2:32:58 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Customer" table="customer" catalog="db1" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="nama" type="string">
+            <column name="Nama" length="50" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="Email" length="25" not-null="true" />
+        </property>
+        <property name="alamat" type="string">
+            <column name="Alamat" length="65535" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
